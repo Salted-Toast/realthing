@@ -1,0 +1,30 @@
+/* login.php - CSS */
+.card {
+    background-color: #f8f9fa;
+    margin-top: 13%;
+    width: 32%;
+}
+
+/* index.php - CSS */
+#landingHeader {
+    height: 50vh;
+    background-image: url("../images/headerBackground.jpg");
+    background-size: cover;
+    background-position: center bottom;
+  }
+  
+#landingHeader #headerContent {
+    background-color: rgba(155, 155, 155, 0.466);
+}
+
+/* footer.php - CSS */
+.footerTextColour {
+    color: #c7c8c9;
+}
+
+/* contact.php - CSS */
+.fullHeight {
+    height:85vh;
+}
+
+/* All Pages - CSS */
