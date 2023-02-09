@@ -11,7 +11,9 @@
     <?php require 'scripts/connect.php'; ?>
 
     <!-- Content -->
-    <h1>Advice</h1>
+    <h1>Donate</h1>
+
+
 
     <!-- Footer -->
     <?php require 'includes/footer.php'; ?>
