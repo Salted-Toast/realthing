@@ -8,9 +8,10 @@
 /* index.php - CSS */
 #landingHeader {
     height: 50vh;
-    background-image: url("../images/headerBackground.jpg");
+    width: 100vw;
+    background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
     background-size: cover;
-    background-position: center bottom;
+    background-position: center;
   }
   
 #landingHeader #headerContent {
