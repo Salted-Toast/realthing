@@ -22,8 +22,6 @@
         $_SESSION['temp'] = '<p>The Temperature in ' . $location . ' is: ' . $temperature . ' degrees celcius</p>';
     };
 
-    
-
     // Redirect
     header('Location: ../weather');
 ?>

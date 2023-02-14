@@ -18,6 +18,7 @@
                 // };
             ?>
             <li class="nav-item"><a class="nav-link" href="donate">Donate</a></li>
+            <li class="nav-item"><a class="nav-link" href="weather">Weather</a></li>
             <li class="nav-item"><a class="nav-link" href="advice">Advice</a></li>
             <li class="nav-item"><a class="nav-link" href="about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>

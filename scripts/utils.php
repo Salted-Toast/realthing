@@ -21,19 +21,9 @@
         };
     };
     
-    // Quiz Functions
-
-    function getQuestions() {
-        require 'connect.php';
-        $sql = "SELECT * FROM questions;";
-        $result = mysqli_query($conn, $sql);
-        return mysqli_fetch_all($result);
-    };
-
-    function getOptions($relevantID) {
-        require 'connect.php';
-        $sql = "SELECT * FROM options WHERE ptions.qid = $relevantID;";
-        $result = mysqli_query($conn, $sql);
-        return mysqli_fetch_all($result);
+    // Kelvin to Celcius
+    function kelvin_to_celcius($kelvin) {
+        $celcuis = $kelvin - 273.15;
+        return $celcuis;
     };
 ?>

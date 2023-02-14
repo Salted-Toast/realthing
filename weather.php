@@ -12,7 +12,7 @@
         <div class="container d-flex justify-content-center">
             <div class="row">
                 <div class="col mt-5">
-                    <form action="scripts/weatherData.php" method="post">
+                    <form action="scripts/weatherData" method="post">
                         <input type="text" name="location" id="location" placeholder="Enter Location!" autofocus>
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </form>
