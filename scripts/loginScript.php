@@ -27,10 +27,10 @@
                 $adminCheck = $row['admin'];
                 if ($adminCheck === 1) {
                     $_SESSION['adminCheck'] = 1;
-                    header('Location: ../dashboard');
+                    header('Location: ../userHub');
                 } else {
                     $_SESSION['adminCheck'] = 0;
-                    header('Location: ../dashboard');
+                    header('Location: ../userHub');
                 };
             } else {
                 session_start();

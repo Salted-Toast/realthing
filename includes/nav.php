@@ -34,7 +34,7 @@
                 </div>';
         } elseif (loginCheck()===1) {
             echo '<div class="navbar-nav">
-                    <form action="dashboard"><button class="btn btn-primary" style="margin-right:4px" type="submit">Dashboard</button></form>
+                    <form action="userHub"><button class="btn btn-primary" style="margin-right:4px" type="submit">Your Hub</button></form>
                     <form action="scripts/logoutScript.php"><button class="btn-danger btn" style="margin-right:7px" type="submit">Logout</button></form>
                 </div>';
         };
