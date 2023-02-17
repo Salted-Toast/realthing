@@ -16,7 +16,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
             // Handle the response
             var data = JSON.parse(this.responseText);
             console.log(data);
-            alert(data)
+            alert(data.name);
         }
     };
     xhr.send();
