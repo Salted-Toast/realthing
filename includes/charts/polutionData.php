@@ -52,8 +52,9 @@
             // Set chart options
             var options = {
             'title': 'Pollutant Values',
-            'width': 800,
-            'height': 800,
+            'width': 400,
+            'height': 400,
+            backgroundColor : '#f8f9fa',
             };
 
             // Instantiate and draw the chart

@@ -19,8 +19,8 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="resources" class="btn btn-primary float-start me-1"> Donate </a>
-                    <a href="bookTutor" class="btn btn-primary flaot-start"> Get Advice </a>
+                    <a href="donate" class="btn btn-primary float-start me-1"> Donate </a>
+                    <a href="advice" class="btn btn-primary flaot-start"> Get Advice </a>
                 </div>
             </div>
         </div>

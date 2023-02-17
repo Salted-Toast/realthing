@@ -64,6 +64,7 @@
         'title': 'Weather Forecast',
         'width': 900,
         'height': 500,
+        backgroundColor : '#f8f9fa',
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('forecast'));

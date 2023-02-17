@@ -14,14 +14,24 @@
 
     <!-- Content -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <!-- Pollution Graph -->
-                <?php require 'includes/charts/polutionData.php'; ?>
-            </div>
-            <div class="col">
-                <!-- Forecast Graph -->
-                <?php require 'includes/charts/forecastData.php'; ?>    
+            <div class="row">
+                <div class="col">
+                    <?php
+                        if (userLocation()===1) {
+                            echo '';
+                        };
+                    ?>
+                    <div class="card">
+                        <!-- Pollution Graph -->
+                        <?php require 'includes/charts/polutionData.php'; ?>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <!-- Forecast Graph -->
+                        <?php require 'includes/charts/forecastData.php'; ?>    
+                    </div>
+                </div>
             </div>
         </div>
     </div>
