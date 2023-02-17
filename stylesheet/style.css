@@ -1,5 +1,5 @@
 /* login.php - CSS */
-.card {
+.loginCard {
     background-color: #f8f9fa;
     margin-top: 13%;
     width: 32%;
@@ -28,4 +28,21 @@
     height:85vh;
 }
 
+/* Advice.php - CSS */
+
+.adviceButton {
+    height: 100px;
+    width: 200px;
+}
+
+.adviceCard {
+    background-color: #f8f9fa;
+    margin-top: 10%;
+}
+
+
 /* All Pages - CSS */
+
+.card {
+    background-color: #f8f9fa;
+}

@@ -10,7 +10,7 @@
 
     <!-- Register Form -->
     <div class="container-fluid">
-        <div class="card col-4 offset-4">
+        <div class="card loginCard col-4 offset-4">
             <h1 style="padding-top:20px; text-align:center;">Register</h1>
             <?php if (isset($_SESSION['registerUnameError'])) {echo '<p style="color:red; padding-top:20px; text-align:center;">'.$_SESSION['registerUnameError'].'</p>'; unset($_SESSION['registerUnameError']);}; ?>
             <?php if (isset($_SESSION['registerBlankError'])) {echo '<p style="color:red; padding-top:20px; text-align:center;">'.$_SESSION['registerBlankError'].'</p>'; unset($_SESSION['registerBlankError']);}; ?>

@@ -20,9 +20,6 @@
                     <?php echo '<h1>Welcome ' . $_SESSION['username'] . '</h1>'; ?>
                 </div>
                 <div class="col">
-                    Allow us to use your location?  <input type="checkbox">
-                </div>
-                <div class="col">
                     <form action="account" method="post">
                         <button type="submit" value="details" class="btn btn-warning btn-warning float-end">Manage Account</button>
                     </form>
