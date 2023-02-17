@@ -28,7 +28,6 @@
     };
 
     // User Location Functions
-
     function userLocation() {
         if (1==1) {
             echo '';

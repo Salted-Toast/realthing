@@ -13,6 +13,9 @@
     <!-- Content -->
     <h1>Support</h1>
 
+    <!-- User Location -->
+    <script src="javascript/userLocation.js" type="text/javascript"></script>
+
     <!-- Footer -->
     <?php require 'includes/footer.php'; ?>
 
@@ -20,3 +23,4 @@
     <?php require 'includes/bootstrapjs.php'; ?>
 </body>
 </html>
+

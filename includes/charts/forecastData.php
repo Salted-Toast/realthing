@@ -1,6 +1,6 @@
 <?php
     // Set up OpenWeatherMap API and location information
-    $apiKey = '49c0bad2c7458f1c76bec9654081a661';
+    $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
     $city = 'London';
     $countryCode = 'uk';
     $units = 'metric'; // Celsius
