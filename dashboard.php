@@ -16,18 +16,17 @@
     <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <?php
-                        if (userLocation()===1) {
-                            echo '';
-                        };
-                    ?>
-                    <div class="card">
+                    <div class="card" style="margin-top: 12px;">
+                        <script src="javascript/userLocation.js"></script>
+                        <div id="location"></div>
+                    </div>
+                    <div class="card" style="margin-top: 12px;">
                         <!-- Pollution Graph -->
                         <?php require 'includes/charts/polutionData.php'; ?>
                     </div>
                 </div>
                 <div class="col">
-                    <div class="card">
+                    <div class="card" style="margin-top: 12px;">
                         <!-- Forecast Graph -->
                         <?php require 'includes/charts/forecastData.php'; ?>    
                     </div>
@@ -37,7 +36,7 @@
     </div>
 
     <!-- Footer -->
-    <?php require 'includes/scrollFooter.php'; ?>
+    <?php require 'includes/footer.php'; ?>
     <!-- JS Bootstrap -->
     <?php require 'includes/bootstrapjs.php'; ?>
 </body>

@@ -35,7 +35,7 @@
 ?>
 
 
-<h1>Current temperature in <?php echo $city; ?>: <?php echo $currentTemp; ?> &deg;C</h1>
+<h1 class="text-center">Current temperature in <?php echo $city; ?>: <?php echo $currentTemp; ?> &deg;C</h1>
 
 <!-- JS for Temperature Chart -->
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>

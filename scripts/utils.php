@@ -26,12 +26,4 @@
         $celcuis = $kelvin - 273.15;
         return $celcuis;
     };
-
-    // User Location Functions
-    function userLocation() {
-        if (1==1) {
-            echo '';
-        };
-    };
-
 ?>

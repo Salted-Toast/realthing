@@ -1,10 +1,10 @@
 <?php
     // Create API Requests
     $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
-    $city = 'London';
+    $location = 'London';
 
     // Geocoding for qoords
-    $url = "http://api.openweathermap.org/geo/1.0/direct?q={$city}&appid={$apiKey}";
+    $url = "http://api.openweathermap.org/geo/1.0/direct?q={$location}&appid={$apiKey}";
 
     // Make Request and Decode into a JSON (True means assoc)
     $locationData = json_decode(file_get_contents($url),true);

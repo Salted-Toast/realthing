@@ -13,11 +13,12 @@
     <!-- Content -->
     <h1>Support</h1>
 
-    <!-- User Location -->
-    <script src="javascript/userLocation.js" type="text/javascript"></script>
+    <script src="javascript/userLocation.js"></script>
+    <?php require 'scripts/userLocation.php'; ?>
 
     <!-- Footer -->
     <?php require 'includes/footer.php'; ?>
+    
 
     <!-- JS Bootstrap -->
     <?php require 'includes/bootstrapjs.php'; ?>
