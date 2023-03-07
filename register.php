@@ -8,6 +8,9 @@
     <!-- Navbar -->
     <?php require 'includes/nav.php'; ?>
 
+    <!-- Redirect if Logged in -->
+    <?php if (loginCheck()) {header('Location: index');}; ?>
+
     <!-- Register Form -->
     <div class="container-fluid">
         <div class="card loginCard col-4 offset-4">

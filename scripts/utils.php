@@ -5,7 +5,7 @@
         if (!isset($_SESSION['loggedin'])) {
             header('location: login');
         } elseif ($_SESSION['loggedin']===1) {
-            return 1;
+            return true;
         } else {
             header('Location: login');
         };
