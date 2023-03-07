@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     
     <!-- Logo (Text for now) -->
     <a class="navbar-brand" style="margin-left:15px;" href="index">Health Advice</a>
@@ -12,11 +12,6 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
-            <?php
-                // if (loginCheck()===1) {
-                //     echo '<li class="nav-item"><a class="nav-link" href="advice">Advice</a></li>';
-                // };
-            ?>
             <li class="nav-item"><a class="nav-link" href="donate">Donate</a></li>
             <li class="nav-item"><a class="nav-link" href="weather">Weather</a></li>
             <li class="nav-item"><a class="nav-link" href="advice">Advice</a></li>
