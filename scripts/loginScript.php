@@ -23,21 +23,13 @@
                 session_start();
                 $_SESSION['username'] = $username;
                 $_SESSION['loggedin'] = 1;
-                 
-                $adminCheck = $row['admin'];
-                if ($adminCheck === 1) {
-                    $_SESSION['adminCheck'] = 1;
-                    header('Location: ../userHub');
-                } else {
-                    $_SESSION['adminCheck'] = 0;
-                    header('Location: ../userHub');
+                header('Location: ../userHub');
                 };
             } else {
                 session_start();
                 $_SESSION['loginErrorMsg'] = 'Incorrect password or username';
                 header('Location: ../login');
             };
-        };
     } else {
         session_start();
         $_SESSION['loginErrorMsg'] = 'Incorrect password or username';

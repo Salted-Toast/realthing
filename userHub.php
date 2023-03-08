@@ -3,18 +3,14 @@
 <head>
     <!-- Head -->
    <?php require 'includes/head.php'; ?>
-   <!-- Login Check -->
-   <?php loginCheck(); ?>
 </head>
 <body>
     <!-- Navbar -->
     <?php require 'includes/nav.php'; ?>
-    <!-- Connection -->
-    <?php require 'scripts/connect.php'; ?>
 
-    <!-- Content -->
+    <!-- User Hub -->
     <div class="container-fluid">
-        <div class="container ">
+        <div class="container">
             <div class="row mb-3 mt-3 border rounded d-flex align-items-center">
                 <div class="col">
                     <?php echo '<h1>Welcome ' . $_SESSION['username'] . '</h1>'; ?>

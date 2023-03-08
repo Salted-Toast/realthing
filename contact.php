@@ -10,7 +10,7 @@
     <!-- Connection -->
     <?php require 'scripts/connect.php'; ?>
 
-    <!-- Content -->
+    <!-- Contact -->
     <div class="container fullHeight d-flex align-items-center justify-content-center">
         <div class="col d-flex justify-content-center text-center">
             <div class="col-md-6 col-sm-12 d-flex align-items-center flex-column pt-5">

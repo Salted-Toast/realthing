@@ -17,6 +17,7 @@
             <li class="nav-item"><a class="nav-link" href="advice">Advice</a></li>
             <li class="nav-item"><a class="nav-link" href="about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="sessionCheck">Session</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="sessionCheck">Session Check</a></li> -->
         </ul>
     </div>
@@ -28,7 +29,7 @@
                     <form action="login"><button class="btn btn-primary" style="margin-right:4px" type="submit">Login</button></form>
                     <form action="register"><button class="btn btn-primary" style="margin-right:7px" type="submit">Register</button></form>
                 </div>';
-        } elseif (loginCheck()===1) {
+        } elseif (loginCheck()) {
             echo '<div class="navbar-nav">
                     <form action="userHub"><button class="btn btn-primary" style="margin-right:4px" type="submit">Your Hub</button></form>
                     <form action="scripts/logoutScript.php"><button class="btn-danger btn" style="margin-right:7px" type="submit">Logout</button></form>
