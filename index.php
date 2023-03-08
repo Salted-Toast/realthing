@@ -36,7 +36,7 @@
                     <a href="about" class="btn btn-primary">About us</a>
                 </div>
                 <div class="col">
-                    <img src="images/aboutUsImage.jpg" class="rounded img-fluid" alt="Teacher teaching class">
+                    <img src="images/aboutUsImage.jpg" class="rounded img-fluid" alt="Group of health professionals examaning an image">
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@
         <div class="container">
             <div class="row d-flex align-items-center" id="getInContact">
                 <div class="col">
-                    <img src="images/contactUs.jpg" class="rounded img-fluid" alt="Pile of books">
+                    <img src="images/contactUs.jpg" class="rounded img-fluid" alt="Doctor examining a microscope">
                 </div>
                 <div class="col">
                     <h1>Get in contact</h1>
