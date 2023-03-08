@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <div class="btn-group" role="group">
                     <a href="healthTracker" type="button" class="btn btn-primary">Personal Health Tracker</a>
                     <a href="dashboard" type="button" class="btn btn-primary">Air Quality Dashboard</a>
                     <a href="advice" type="button" class="btn btn-primary">Get Advice</a>
