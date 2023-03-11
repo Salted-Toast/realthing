@@ -15,14 +15,13 @@
                 <div class="row">
                     <div class="card" style="margin-top: 12px;">
                         <?php echo '<h1 style="text-align:center;">The current location selected is: ' . 'London' . '</h1>'?>
-                        <script src="javascript/userLocation.js"></script>
                         <div id="location"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="card" style="margin-top: 12px;">
                         <!-- Forecast Graph -->
-                        <?php require 'includes/charts/forecastData.php'; ?>    
+                        <?php require 'includes/charts/test.php'; ?>                     
                     </div>
                 </div>
             </div>

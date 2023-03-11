@@ -1,5 +1,5 @@
 <?php
-    require 'scripts/userDetails.php';
+    require 'scripts/userLocation.php';
     // Set up OpenWeatherMap API and location information
     $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
     $city = $location;
@@ -12,7 +12,7 @@
     $currentTemp = $currentWeather->main->temp;
 
     // Make API request for next week's forecast
-    $forecastUrl = "https://api.openweathermap.org/data/2.5/forecast?q={$city}&units={$units}&appid={$apiKey}";
+    $forecastUrl = "https://api.openweathermap.org/data/2.5/forecast/daily?q={$city}&units={$units}&appid={$apiKey}";
     $forecast = json_decode(file_get_contents($forecastUrl));
 
     // Parse the forecast data and store in an array
