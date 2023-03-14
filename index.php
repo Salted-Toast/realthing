@@ -10,6 +10,17 @@
     <!-- Connection -->
     <?php require 'scripts/connect.php'; ?>
 
+    <script>
+        // Retrieve the user's geolocation coordinates
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+        console.log('Longitude: ' + longitude + ' latitude: ' + latitude);
+
+        });
+    </script>
+
     <!-- Header -->
     <div class="container-fluid d-flex align-items-center mb-5" id="landingHeader">
         <div class="container rounded p-5" id="headerContent">
