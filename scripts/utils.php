@@ -4,7 +4,7 @@
     function loginCheck() {
         if (!isset($_SESSION['loggedin'])) {
             return false;
-        } elseif ($_SESSION['loggedin']===1) {
+        } elseif ($_SESSION['loggedin']) {
             return true;
         } else {
             return false;

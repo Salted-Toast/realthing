@@ -5,23 +5,15 @@
 
     // Create URL for API request
     $api_key = '9ec72fafc67f2ebbe14095e1c5426123';
-    $url="http://api.openweathermap.org/data/2.5/weather?q={$location}&appid={$api_key}";
+    $url="http://api.openweathermap.org/geo/1.0/direct?q={$location}&appid={$api_key}";
+    
 
     // Decode Data into an array (true makes it assoc)
     $weather_data = json_decode(file_get_contents($url), true);
-
+    
     // Extract Relevant Data
-    $kelvin_temperature = $weather_data['main']['temp'];
-    $temperature = kelvin_to_celcius($kelvin_temperature);
+    $lat = $data[0]['lat'];
+    $lon = $data[0]['lon'];
 
-    if ($temperature == -273.15) {
-        session_start();
-        $_SESSION['temp_error'] = '<p>That was an invalid location</p>';
-    } elseif ($temperature > -273.15) {
-        session_start();
-        $_SESSION['temp'] = '<p>The Temperature in ' . $location . ' is: ' . $temperature . ' degrees celcius</p>';
-    };
-
-    // Redirect
-    header('Location: ../weather');
+    // header('Location: ../weather')
 ?>

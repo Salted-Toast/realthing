@@ -22,7 +22,7 @@
             if (password_verify($password, $storedPassword)) {
                 session_start();
                 $_SESSION['username'] = $username;
-                $_SESSION['loggedin'] = 1;
+                $_SESSION['loggedin'] = true;
                 header('Location: ../userHub');
                 };
             } else {
