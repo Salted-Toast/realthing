@@ -1,15 +1,25 @@
 <?php
-    // Grab coords from AJAX request
-    $lat = $_GET['lat'];
-    $lon = $_GET['lon'];
-    // API Key
-    $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
+    // Grab the inputs
+    $location = $_POST['location'];
 
-    // Craft the URL
-    $url = 'https://api.openweathermap.org/geo/1.0/reverse?lat=' . $lat . '&lon=' . $lon . '&appid=' . $apiKey;
+    // Create URL for API request
+    $api_key = '9ec72fafc67f2ebbe14095e1c5426123';
+    $url="http://api.openweathermap.org/geo/1.0/direct?q={$location}&appid={$api_key}";
     
-    // Get Resopnse and Read it
-    $locationData = json_decode(file_get_contents($url), true);
-    // Grab the Value
-    $location = $locationData[0]['name'];
+
+    // Decode Data into an array (true makes it assoc)
+    $data = json_decode(file_get_contents($url), true);
+    
+    // Check API response
+    if ($data == null) {
+        echo 'Invalid Location';
+    } else {
+        // Extract Relevant Data
+        $lat = $data[0]['lat'];
+        $lon = $data[0]['lon'];
+        echo $lat, ' ', $lon;
+    };
+    
+    // Redirect
+    header('Location: ../weather')
 ?>

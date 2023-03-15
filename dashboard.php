@@ -13,8 +13,13 @@
         <div class="row">
             <div class="col">
                 <div class="row">
-                    <div class="card" style="margin-top: 12px;">
+                    <div class="card">
                         <?php echo '<h1 style="text-align:center;">The current location selected is: ' . 'London' . '</h1>'?>
+                        <!-- Lets the user choose location -->
+                        <form action="scripts/userLocation" method="post">
+                            <input type="text" name="location" placeholder="Enter Location!" autofocus>
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </form>
                         <div id="location"></div>
                     </div>
                 </div>
