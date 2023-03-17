@@ -17,10 +17,6 @@
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </form>
                 </div>
-                <div class="col mt-5">
-                    <?php if (isset($_SESSION['temp'])) {echo $_SESSION['temp']; unset($_SESSION['temp']);};  ?>
-                    <?php if (isset($_SESSION['temp_error'])) {echo $_SESSION['temp_error']; unset($_SESSION['temp_error']);};  ?>
-                </div>
             </div>
         </div>
     </div>
