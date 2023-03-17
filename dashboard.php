@@ -13,10 +13,15 @@
         <div class="row">
             <div class="col">
                 <div class="row">
-                    <div class="card">
-                        <?php echo '<h1 style="text-align:center;">The current location selected is: ' . 'London' . '</h1>'?>
+                    <div class="card mt-3 p-4">
+                        <?php
+                            // Grab Values
+                            $location = $_POST=['location'];
+
+                        ?>
+                        <?php echo '<h1 style="text-align:center;">The current location selected is: ' . $location . '</h1>'?>
                         <!-- Lets the user choose location -->
-                        <form action="scripts/userLocation" method="post">
+                        <form name="" action="" method="post">
                             <input type="text" name="location" placeholder="Enter Location!" autofocus>
                             <button class="btn btn-primary" type="submit">Submit</button>
                         </form>
@@ -24,14 +29,15 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="card" style="margin-top: 12px;">
+                    <div class="card mt-3 p-4" style="margin-top: 12px;">
                         <!-- Forecast Graph -->
-                        
+                        <h1>Weather Forecast Graph</h1>
                     </div>
                 </div>
             </div>
             <div class="col">
-                <div class="card" style="margin-top: 12px;">
+                <div class="card mt-3 p-4">
+                    <h1>Pollution Pie Chart</h1>
                     <?php
                         // Create API Requests
                         $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
@@ -99,7 +105,6 @@
 
                     <!-- Display the chart -->
                     <div id="polution"></div>
-
                 </div>
             </div>
         </div>
