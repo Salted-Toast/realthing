@@ -22,7 +22,7 @@
                             $lat = $coords[0];
                             $lon = $coords[1];
                         ?>
-                        <?php echo '<h1>The current location selected is: ' . $location . '</h1>'?>
+                        <?php echo '<h1>Location selected: ' . $location . '</h1>'?>
                         <!-- Lets the user choose location -->
                         <form name="" action="" class="form-signin" method="post">
                             <input type="text" name="location" class="form-control" placeholder="Enter Location!" autofocus>
