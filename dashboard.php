@@ -16,13 +16,16 @@
                     <div class="card mt-3 p-4">
                         <?php
                             // Grab Values
-                            $location = $_POST=['location'];
-
+                            $location = $_POST['location'];
+                            // Get user Coords
+                            $coords = userCoords($location);
+                            $lat = $coords[0];
+                            $lon = $coords[1];
                         ?>
-                        <?php echo '<h1 style="text-align:center;">The current location selected is: ' . $location . '</h1>'?>
+                        <?php echo '<h1>The current location selected is: ' . $location . '</h1>'?>
                         <!-- Lets the user choose location -->
-                        <form name="" action="" method="post">
-                            <input type="text" name="location" placeholder="Enter Location!" autofocus>
+                        <form name="" action="" class="form-signin" method="post">
+                            <input type="text" name="location" class="form-control" placeholder="Enter Location!" autofocus>
                             <button class="btn btn-primary" type="submit">Submit</button>
                         </form>
                         <div id="location"></div>
@@ -41,17 +44,6 @@
                     <?php
                         // Create API Requests
                         $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
-                        $location = 'London';
-
-                        // Geocoding for qoords
-                        $url = "http://api.openweathermap.org/geo/1.0/direct?q={$location}&appid={$apiKey}";
-
-                        // Make Request and Decode into a JSON (True means assoc)
-                        $locationData = json_decode(file_get_contents($url),true);
-
-                        // Extract latitude and longitude from $polutionData array
-                        $lat = $locationData[0]['lat'];
-                        $lon = $locationData[0]['lon'];
 
                         // API request for polutants
                         $url = "http://api.openweathermap.org/data/2.5/air_pollution?lat={$lat}&lon={$lon}&appid={$apiKey}";

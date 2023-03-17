@@ -18,12 +18,16 @@
         // Decode Data into an array (true makes it assoc)
         $data = json_decode(file_get_contents($url), true);
 
-        // Extract Relevant Data
-        $lat = $data[0]['lat'];
-        $lon = $data[0]['lon'];
+        if (!empty($data)){
+            // Extract Relevant Data
+            $lat = $data[0]['lat'];
+            $lon = $data[0]['lon'];
 
-        // Return Coords
-        return [$lat, $lon];
+            // Return Coords
+            return [$lat, $lon];
+        };
+
+        return null;
     };
 
 ?>
