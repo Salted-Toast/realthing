@@ -17,18 +17,30 @@
                         <?php
                             // Grab Values
                             $location = $_POST['location'];
+
                             // Get user Coords
                             $coords = userCoords($location);
-                            $lat = $coords[0];
-                            $lon = $coords[1];
+                            if ($coords != null) {
+                                $lat = $coords[0];
+                                $lon = $coords[1];
+                            };
                         ?>
-                        <?php echo '<h1>Location selected: ' . $location . '</h1>'?>
+                        <?php
+                            // Check for Valid Location
+                            if ($coords != null) {
+                                echo '<h1>Location Selected: ' . $location . '</h1>';
+                            } else {
+                                echo '<h1>Location Selected is Invalid</h1>';
+                            }
+                        ?>
+
                         <!-- Lets the user choose location -->
-                        <form name="" action="" class="form-signin" method="post">
-                            <input type="text" name="location" class="form-control" placeholder="Enter Location!" autofocus>
-                            <button class="btn btn-primary" type="submit">Submit</button>
+                        <form name="" action="" method="post">
+                            <div class="input-group">
+                                <input type="text" name="location" class="form-control" placeholder="Enter Location!" autofocus>
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </div>
                         </form>
-                        <div id="location"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -40,8 +52,12 @@
             </div>
             <div class="col">
                 <div class="card mt-3 p-4">
-                    <h1>Pollution Pie Chart</h1>
+                    <h1>Pollution Chart</h1>
                     <?php
+                        if (!isset($lat, $lon)) {
+                            exit();
+                        };
+
                         // Create API Requests
                         $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
 
