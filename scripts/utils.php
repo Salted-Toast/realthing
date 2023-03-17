@@ -1,6 +1,5 @@
 <?php
     // User Verification Functions
-
     function loginCheck() {
         if (!isset($_SESSION['loggedin'])) {
             return false;
@@ -12,7 +11,6 @@
     };
 
     // User Coords Functions
-
     function userCoords($location) {
         $api_key = '9ec72fafc67f2ebbe14095e1c5426123';
         $url = "https://api.openweathermap.org/geo/1.0/direct?q={$location}&appid={$api_key}";
