@@ -9,7 +9,7 @@
             <link><a class="m-2" href="support">Support</a></link>
         </div>
         <div class="col-4 text-center">
-            <p class="fs-4">healthadv@healthadv.com</p>
+            <p class="fs-4">contact@healthadv.com</p>
         </div>
     </div>
 </div>

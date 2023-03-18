@@ -14,7 +14,7 @@
     <div class="container fullHeight d-flex align-items-center justify-content-center">
         <div class="col d-flex justify-content-center text-center">
             <div class="col-md-6 col-sm-12 d-flex align-items-center flex-column pt-5">
-                <p>Email: healthadv@healthadv</p>
+                <p>Email: contact@healthadv</p>
                 <p>Tel: +44 07455 569875</p>
                 <p>Address: Knightstone Campus, Knightstone Rd, Weston-super-Mare</p>
                 <p>Postcode: BS23 2AL</p>
