@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-lg border navbar-light bg-light sticky-top">
     
     <!-- Logo (Text for now) -->
     <a class="navbar-brand" style="margin-left:15px;" href="index">Health Advice</a>
