@@ -16,7 +16,7 @@
                     <div class="card mt-3 p-4">
                         <?php
                             // Grab Values
-                            $location = $_POST['location'];
+                            $location = isset($_POST['location']) ? $_POST['location'] : null;
 
                             // Get user Coords
                             $coords = userCoords($location);
@@ -37,7 +37,7 @@
                         <!-- Lets the user choose location -->
                         <form name="" action="" method="post">
                             <div class="input-group">
-                                <input type="text" name="location" class="form-control" placeholder="Enter Location!" autofocus>
+                                <input type="text" name="location" class="form-control" placeholder="Enter Location!">
                                 <button class="btn btn-primary" type="submit">Submit</button>
                             </div>
                         </form>
@@ -47,9 +47,54 @@
                     <div class="card mt-3 p-4" style="margin-top: 12px;">
                         <!-- Forecast Graph -->
                         <h1>Weather Forecast Graph</h1>
-                    </div>
+                        <?php
+                        if (!isset($lat, $lon)) {
+                            exit();
+                        };
+
+                        // Create API Requests
+                        $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
+
+                        // API request for polutants
+                        $url = "https://api.openweathermap.org/data/2.5/forecast?lat={$lat}&lon={$lon}&appid={$apiKey}";
+                        // Make Request and Decode into a JSON (True means assoc)
+                        $polutionData = json_decode(file_get_contents($url),true);
+
+                        // Extact Values From JSON
+
+                        
+                    ?>
+
+                    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                    <script type="text/javascript">
+                        google.charts.load('current', {'packages':['corechart']});
+                        google.charts.setOnLoadCallback(drawChart);
+
+                        function drawChart() {
+                            // Create the data table
+                            var data = new google.visualization.DataTable();
+                            data.addColumn('', '');
+                            data.addColumn('', '');
+                            data.addRows([[]]);
+
+                            // Set chart options
+                            var options = {
+                            'title': 'Weather Forecast',
+                            'width': 400,
+                            'height': 400,
+                            backgroundColor : '#f8f9fa',
+                            };
+
+                            // Instantiate and draw the chart
+                            var chart = new google.visualization.PieChart(document.getElementById('forecast'));
+                            chart.draw(data, options);
+                        }
+                    </script>
+                    <!-- Display the chart -->
+                    <div id="forecast"></div>
                 </div>
             </div>
+
             <div class="col">
                 <div class="card mt-3 p-4">
                     <h1>Pollution Chart</h1>
