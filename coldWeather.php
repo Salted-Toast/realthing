@@ -13,7 +13,6 @@
     <!-- Content -->
     <h1>How does cold weather affect your health?</h1>
 
-
     <!-- Footer -->
     <?php require 'includes/footer.php'; ?>
 

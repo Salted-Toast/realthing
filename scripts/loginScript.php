@@ -20,7 +20,9 @@
         $storedPassword = $row['password']; 
         if (mysqli_num_rows($result) > 0) {
             if (password_verify($password, $storedPassword)) {
+                $userID = $row['user_id'];
                 session_start();
+                $_SESSION['userID'] = $userID;
                 $_SESSION['username'] = $username;
                 $_SESSION['loggedin'] = true;
                 header('Location: ../userHub');
