@@ -11,7 +11,13 @@
     <?php require 'scripts/connect.php'; ?>
 
     <!-- Content -->
-    
+    <div class="row">
+        <div class="col">
+            <div class="card m-4 p-4">
+
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <?php require 'includes/footer.php'; ?>
