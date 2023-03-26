@@ -17,8 +17,25 @@
     // Grab user ID
     session_start();
     $userID = $_SESSION['userID'];
-    $temperature = 12.6;
-    $aqi = 3;
+
+    // Grab AQI and Temperature
+    $location = $_POST['location'];
+    $apiKey = '9ec72fafc67f2ebbe14095e1c5426123';
+    $coords = userCoords($location);
+    if ($coords != null) {
+        $lat = $coords[0];
+        $lon = $coords[1];
+    }else {
+        $location = null;
+    };
+    $units = 'metric';
+    $tempUrl = "https://api.openweathermap.org/data/2.5/weather?lat={$lat}&lon={$lon}&units={$units}&appid={$apiKey}";
+    $aqiUrl = "https://api.openweathermap.org/data/2.5/geo?lat={$lat}&lon={$lon}&appid={$apiKey}";
+
+    $temperature = json_decode(file_get_contents($tempUrl), true)['main']['temp'];
+    $aqi = json_decode(file_get_contents($aqiUrl), true)['main']['aqi'];
+
+    // Grab Date and Time
     $date = date('Y/m/d');
     $time = date('H:i:s');
 
