@@ -13,11 +13,10 @@
         <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="donate">Donate</a></li>
-            <li class="nav-item"><a class="nav-link" href="weather">Weather</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="weather">Weather</a></li> -->
             <li class="nav-item"><a class="nav-link" href="advice">Advice</a></li>
             <li class="nav-item"><a class="nav-link" href="about">About</a></li>
             <li class="nav-item"><a class="nav-link" href="contact">Contact</a></li>
-            <li class="nav-item"><a class="nav-link" href="sessionCheck">Session</a></li>
             <!-- <li class="nav-item"><a class="nav-link" href="sessionCheck">Session Check</a></li> -->
         </ul>
     </div>

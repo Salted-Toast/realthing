@@ -13,51 +13,71 @@
     <?php require 'scripts/connect.php'; ?>
 
     <!-- Content -->
-    <div class="container-fluid">
-        <div class="container">
-            <div class="row">
+    <div class="container">
+        <div class="card m-4 p-4">
+            <div class="row mb-3 d-flex align-items-center">
                 <div class="col">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <?php
-                                    // Chuck Data into table
-                                    while($row = mysqli_fetch_assoc($result)) {
-                                        echo '<tr> <td>' . $row['user_id'] . '</td>';
-                                        echo '<td>' . $row['username'] . '</td></tr>';
-                                    };
-                                ?>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php require 'scripts/userDetails.php'; ?>
-                        </tbody>
-                    </table>
+                    <h1>Account Details</h1>
                 </div>
                 <div class="col">
-                    <table class="table">
-                        <thead>
-                            <th scope="col">#</th>
-                            <th scope="col">Username</th>
-                        </thead>
-                        <tbody>
-                            <?php
-                                require 'scripts/userDetails.php';
+                    <a href="scripts/deleteAccount.php" class="btn btn-danger float-end">Delete Account</a>
+                </div>
+            </div>
+            <div class="row">
+                <hr>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>User Details</h1>
+                    <?php
+                        // Connect to the DB
+                        require 'scripts/connect.php';
 
-                                while($row = mysqli_fetch_assoc($result)) {
-                                    ?>
-                                        <!-- Form to Change Data -->
-                                        <form action="scripts/editData.php" method="post">
-                                            ProductID: <input type="number" name="productID" id="productID" value=<?php echo $row['ProductID']; ?>>    
-                                            ProductName: <input type="text" name="productName" id="productName" value=<?php echo $row['ProductName']; ?>>
-                                            <button type="submit" class="btn btn-primary">Edit Item</button>    
-                                        </form>
+                        // Craft the SQL Statements
+                        $sql1 = "SELECT * FROM users WHERE user_id = ?;";
+                        $sql2 = "SELECT * FROM user_profile WHERE user_id = ?;";
 
-                                    <?php
-                                };
-                            ?>    
-                        </tbody>
-                    </table>
+                        // Grab user ID
+                        $userID = $_SESSION['userID'];
+
+                        // Prep and exec both statements
+                        $sqlPrep1 = mysqli_prepare($conn, $sql1);
+                        mysqli_stmt_bind_param($sqlPrep1, 's', $userID);
+                        mysqli_stmt_execute($sqlPrep1);
+                        $usersResult = mysqli_stmt_get_result($sqlPrep1);
+
+                        $sqlPrep2 = mysqli_prepare($conn, $sql2);
+                        mysqli_stmt_bind_param($sqlPrep2, 's', $userID);
+                        mysqli_stmt_execute($sqlPrep2);
+                        $profileResult = mysqli_stmt_get_result($sqlPrep2);
+
+                        // Users Table
+                        if ($usersRow = mysqli_fetch_assoc($usersResult)){
+                            if (mysqli_num_rows($usersResult) === 1) {
+                                $username = $usersRow['username'];
+                            };
+                        };
+                        // User_profile Table
+                        if ($profileRow = mysqli_fetch_assoc($profileResult)){
+                            if (mysqli_num_rows($profileResult) === 1) {
+                                $firstname = $profileRow['firstname'];
+                                $surname = $profileRow['surname'];
+                                $email = $profileRow['email'];
+                            };
+                        };
+                    ?>
+                    <ul>
+                        <li>Username: <?php echo $username; ?></li>
+                        <li>Firstname: <?php echo $firstname; ?></li>
+                        <li>Surname: <?php echo $surname; ?></li>
+                        <li>Email: <?php echo $email; ?></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h1>Change Details</h1>
+                    <form class="form-signin" action="scripts/changePassword.php" method="post">
+                        <div class="form-group"><input type="password" name="loginPass" class="form-control mb-3" placeholder="Password"></div>
+                    </form>
                 </div>
             </div>
         </div>

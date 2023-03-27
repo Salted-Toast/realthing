@@ -25,6 +25,8 @@
                 $_SESSION['userID'] = $userID;
                 $_SESSION['username'] = $username;
                 $_SESSION['loggedin'] = true;
+                // Flag login event in DB
+                $sql = "INSERT INTO ";
                 header('Location: ../userHub');
                 };
             } else {
