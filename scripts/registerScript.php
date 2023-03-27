@@ -50,6 +50,7 @@
 
         // Log the user in after register
         session_start();
+        $_SESSION['userID'] = $userID;
         $_SESSION['username'] = $username;
         $_SESSION['loggedin'] = 1;
         header('Location: ../index');
