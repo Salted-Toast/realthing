@@ -38,11 +38,12 @@
             </ul>
             <div id="login-history" class="tab-content active">
                 <h3 class="mt-3">User Login History</h3>
-                <p>Here's a list of recent logins:</p>
                 <ul>
-                    <li>March 25, 2023 - 9:30am</li>
-                    <li>March 24, 2023 - 3:15pm</li>
-                    <li>March 23, 2023 - 10:45am</li>
+                    <li>
+                        <?php
+                            // retreive data and pack it into a li tag in a while loop and stop after 10 or so
+                        ?>
+                    </li>
                 </ul>
             </div>
             <div id="feature-explanation" class="tab-content">
