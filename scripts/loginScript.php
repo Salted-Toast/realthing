@@ -39,4 +39,16 @@
         $_SESSION['loginErrorMsg'] = 'Incorrect password or username';
         header('Location: ../login');
     };
+
+    // Add login date and time to DB
+    $sql = "INSERT INTO user_login (user_id, date, time) VALUES (?,?,?);";
+
+    // Grab date and time
+    $date = date('Y/m/d');
+    $time = date('H:i:s');
+
+    // Working on SQL Prep
+    $sqlPrep = mysqli_prepare($conn, $sql);
+    mysqli_stmt_bind_param($sqlPrep, 'iss', $userID, $date, $time);
+    mysqli_stmt_execute($sqlPrep);
 ?>

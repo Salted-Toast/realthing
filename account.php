@@ -28,7 +28,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <h1>User Details</h1>
+                    <h1>View Details</h1>
                     <?php
                         // Connect to the DB
                         require 'scripts/connect.php';
@@ -74,9 +74,15 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <h1>Change Details</h1>
-                    <form class="form-signin" action="scripts/changePassword.php" method="post">
-                        <div class="form-group"><input type="password" name="loginPass" class="form-control mb-3" placeholder="Password"></div>
+                    <h1 class="mb-3 text-center">Change Details</h1>
+                    <p class="form-text text-center">(Comming Soon)</p>
+                    <form class="form-signin" action="#" method="post">
+                        <div class="form-group"><input type="text" name="email" class="form-control mb-3" placeholder="Email"></div>
+                        <div class="form-group"><input type="text" name="firstname" class="form-control mb-3" placeholder="Firstname"></div>
+                        <div class="form-group"><input type="text" name="surname" class="form-control mb-3" placeholder="Surname"></div>
+                        <div class="form-group"><input type="text" name="username" class="form-control mb-3" placeholder="Username"></div>
+                        <div class="form-group"><input type="password" name="password" class="form-control mb-3" placeholder="Password"></div>
+                        <button class="btn btn-primary col-md-12" type="submit">Submit Changes</button>
                     </form>
                 </div>
             </div>
