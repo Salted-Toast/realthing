@@ -1,8 +1,8 @@
 <?php
-    // Connect to DB
+    // Connect to db
     require 'connect.php';
-    
-    // Grab Form Inputs
+
+    // Grab Register Input
     $email = $_POST['regEmail'];
     $firstname = $_POST['regFirstname'];
     $surname = $_POST['regSurname'];
@@ -10,50 +10,47 @@
     $password = $_POST['regPassword'];
 
     // Hash Password
-    $hashedPass = password_hash($password, PASSWORD_DEFAULT);
-
-    //Check if username is already in use
-    $sql = "SELECT * FROM users WHERE username = ?;";
-    $sqlPrep = mysqli_prepare($conn, $sql);
-    mysqli_stmt_bind_param($sqlPrep, 's', $username);
-    mysqli_stmt_execute($sqlPrep);
-    $result = mysqli_stmt_get_result($sqlPrep);
-
-    // Empy Feild Check
-    if (empty($username) || empty($password) || empty($email) || empty($firstname) || empty($surname)) {
-        session_start();
-        $_SESSION['registerBlankError'] = 'Please fill in all feilds';
-        header('Location: ../register');
-        exit();
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+ 
+    // Check if Username is allready in use
+    $sql1 = "SELECT * FROM users WHERE username = ?;";
         
-    } elseif(mysqli_num_rows($result) > 0) {
+    // Prepare the SQL for execution
+    $sqlPrep1 = mysqli_prepare($conn, $sql1);
+    mysqli_stmt_bind_param($sqlPrep1, 's', $username);
+    mysqli_stmt_execute($sqlPrep1);
+    $result = mysqli_stmt_get_result($sqlPrep1);
+
+    // If username exists inform user
+    if (mysqli_num_rows($result) > 0) {
         session_start();
-        $_SESSION['registerUnameError'] = 'Username is taken';
+        $_SESSION['registerUsernameError'] = 'Username is taken';
         header('Location: ../register');
         exit();
-    
+
     } else {
-        // Make Query and Execute
-        $sql1 = "INSERT INTO users (username, password) VALUES(?,?);";
-        $sqlPrep1 = mysqli_prepare($conn, $sql1);
-        mysqli_stmt_bind_param($sqlPrep1, 'ss', $username, $hashedPass);
-        mysqli_stmt_execute($sqlPrep1);
-
-        // Gets user id so it can insert other content into diff table
-        $userID = mysqli_insert_id($conn);
-
-        // Insert the rest of the data 
-        $sql2 = "INSERT INTO `user_profile` (`user_id`, `firstname`, `surname`, `email`) VALUES (?,?,?,?);";
+        // Make Query and insert values into tables
+        $sql2 = "INSERT INTO users (username, password) VALUES (?,?);";
+        
+        // Prepare the SQL for execution
         $sqlPrep2 = mysqli_prepare($conn, $sql2);
-        mysqli_stmt_bind_param($sqlPrep2, 'ssss', $userID, $firstname, $surname, $email);
+        mysqli_stmt_bind_param($sqlPrep2, 'ss', $username , $hashedPassword);
         mysqli_stmt_execute($sqlPrep2);
 
-        // Log the user in after register
+        // Gets user ID to allow table to be relational
+        $userID = mysqli_insert_id($conn);
+
+        // Insert the rest of the data
+        $sql3 = "INSERT INTO user_profile (user_id, firstname, surname, email) VALUES (?,?,?,?);";
+        $sqlPrep3 = mysqli_prepare($conn, $sql3);
+        mysqli_stmt_bind_param($sqlPrep3, 'isss', $userID, $firstname, $surname, $email);
+        mysqli_stmt_execute($sqlPrep3);
+
+        // Log the user in for a better experience
         session_start();
         $_SESSION['userID'] = $userID;
         $_SESSION['username'] = $username;
-        $_SESSION['loggedin'] = 1;
-        header('Location: ../index');
-    }
+        $_SESSION['loginStatus'] = true;
+        header('Location: ../userHub');
+    };
 ?>
-

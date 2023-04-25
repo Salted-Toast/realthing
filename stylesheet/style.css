@@ -1,56 +1,40 @@
-/* login.php - CSS */
-.loginCard {
-    background-color: #f8f9fa;
-    margin-top: 13%;
-    width: 32%;
+/* All Pages CSS */
+
+.card {
+    background-color: #f8f9fa!important;
 }
 
-/* index.php - CSS */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Login CSS */
+
+#loginCard {
+    margin-top: 25vh!important;
+}
+
+/* Register CSS */
+
+#registerCard {
+    margin-top: 15vh!important
+}
+
+/* Donate CSS */
+
+#donateCard{
+    margin-top: 15vh!important;
+}
+
+/* Index CSS */
 #landingHeader {
     height: 50vh;
     width: 100vw;
-    background-image: url("../images/wallpaperflare.com_wallpaper.jpg");
+    background-image: url('../images/landingHeader.png');
     background-size: cover;
-    background-position: center;
-  }
-  
-#landingHeader #headerContent {
-    background-color: rgba(155, 155, 155, 0.466);
+    background-position: bottom;
 }
 
-/* footer.php - CSS */
-.footerTextColour {
-    color: #c7c8c9;
-}
-
-/* contact.php - CSS */
-.fullHeight {
-    height:85vh;
-}
-
-/* Advice.php - CSS */
-
-.adviceButton {
-    height: 100px;
-    width: 200px;
-}
-
-.adviceCard {
-    background-color: #f8f9fa;
-    margin-top: 10%;
-}
-
-/* Register.php - CSS */
-
-.registerCard {
-    background-color: #f8f9fa;
-    margin-top: 10%;
-    width: 32%;
-}
-
-
-/* All Pages - CSS */
-
-.card {
-    background-color: #f8f9fa;
+#headerContent {
+    background-color: rgba(155, 155, 155, 0.466)
 }

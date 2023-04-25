@@ -1,67 +1,62 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Head -->
-   <?php require 'includes/head.php'; ?>
+    <!-- Header -->
+    <?php require 'includes/head.php'; ?>
 </head>
 <body>
     <!-- Navbar -->
-    <?php require 'includes/nav.php'; ?>
-    <!-- Connection -->
-    <?php require 'scripts/connect.php'; ?>
-
-    <!-- Header -->
+    <?php require 'includes/navbar.php'; ?>
+    
+    <!-- Content -->
     <div class="container-fluid d-flex align-items-center mb-5" id="landingHeader">
         <div class="container rounded p-5" id="headerContent">
             <div class="row">
-                <h1>Welcome to Health Advice!</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum cumque illo dolorum similique itaque laborum voluptatem natus modi ex in.</p>
+                <h1>Welcome to Health Advice</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quos, et a at labore minima in modi adipisci veniam repellat ad, cumque dolorem sunt explicabo commodi dolore accusantium deserunt unde!</p>
             </div>
             <div class="row">
                 <div class="col">
-                    <a href="donate" class="btn btn-primary float-start me-1"> Donate </a>
-                    <a href="advice" class="btn btn-primary flaot-start"> Get Advice </a>
+                    <a href="donate" class="btn btn-primary">Donate</a>
+                    <a href="advice" class="btn btn-primary">Advice</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Who We Are -->
-    <div class="container-fluid d-flex mb-3">
+    <div class="container-fluid mb-3">
         <div class="container">
-            <div class="row d-flex align-items-center" id="whoAreWe">
+            <div class="row d-flex align-items-center">
                 <div class="col">
-                    <h1>Who are we?</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum cumque illo dolorum similique itaque laborum voluptatem natus modi ex in.</p>
-                    <a href="about" class="btn btn-primary">About us</a>
+                    <h1>Who we are</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae nostrum aspernatur fugiat, quia alias ullam libero odio vitae adipisci dolorem, corrupti corporis veritatis culpa laboriosam vel enim, quisquam porro!</p>
+                    <a href="about" class="btn btn-primary">About Us</a>
                 </div>
                 <div class="col">
-                    <img src="images/aboutUsImage.jpg" class="rounded img-fluid" alt="Group of health professionals examaning an image">
+                    <img src="images/whoWeAre.png" class="rounded" alt="Health professionals viewing charts">
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Get in Contact -->
-    <div class="container-fluid d-flex mb-5">
+    <div class="container-fluid mb-5">
         <div class="container">
-            <div class="row d-flex align-items-center" id="getInContact">
+            <div class="row d-flex align-items-center">
                 <div class="col">
-                    <img src="images/contactUs.jpg" class="rounded img-fluid" alt="Doctor examining a microscope">
+                    <img src="images/contact.png" class="rounded" alt="Health professionals discussing work">
                 </div>
                 <div class="col">
                     <h1>Get in contact</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum cumque illo dolorum similique itaque laborum voluptatem natus modi ex in.</p>
-                    <a href="contact" class="btn btn-primary float-start me-1"> Contact us </a>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla fugit mollitia beatae aliquid hic, qui quod eligendi, odio culpa eum perspiciatis saepe voluptate itaque eaque totam ipsam atque laudantium accusamus.</p>
+                    <a href="contact" class="btn btn-primary">Contact</a>
                 </div>
             </div>
         </div>
     </div>
-
+    
     <!-- Footer -->
     <?php require 'includes/scrollFooter.php'; ?>
 
-    <!-- JS Bootstrap -->
+    <!-- Bootstrap JS -->
     <?php require 'includes/bootstrapjs.php'; ?>
 </body>
 </html>

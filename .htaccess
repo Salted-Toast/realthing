@@ -1,24 +1,24 @@
-# Rewriting url to miss out `.php`
+# Rewrite url to miss out the .php
 
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 
-# Redirect all 404 to specific page
+# Redirect all 404 errors to the 404 page
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . /specialism/errors/404.php [L]
+RewriteRule /404.php [L]
 
-# Redirect all 401 to specific page
-
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . /specialism/errors/401.php [L]
-
-# Redirect all 403 to specific page
+# Redirect all 403 errors to the 401/403 page
 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule . /specialism/errors/401.php [L]
+RewriteRule /401.php [L]
+
+# Redirect all 401 errors to the 401/403 page
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule /401.php [L]

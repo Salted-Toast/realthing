@@ -1,24 +1,22 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Head -->
-   <?php require 'includes/head.php'; ?>
+    <?php require 'includes/head.php'; ?>
 </head>
 <body>
     <!-- Navbar -->
-    <?php require 'includes/nav.php'; ?>
-    <!-- Connection -->
-    <?php require 'scripts/connect.php'; ?>
+    <?php require 'includes/navbar.php'; ?>
+    
+    <!-- Content -->
+    <h1>Session Checker</h1>
 
-    <h1>This the Session Checker</h1>
+    <?php var_dump($_SESSION);?>
+    <form action="scripts/logout.php"><button class="btn btn-danger">Kill Sessions</button></form>
 
-    <?php var_dump($_SESSION); ?>
+    <!-- Footer -->
+    <?php require 'includes/footer.php'; ?>
 
-    <br>
-
-    <form action="scripts/logoutScript.php"><button class="btn-danger btn" style="margin-right:7px" type="submit">Molest Sessions</button></form>
-
-    <!-- JS Bootstrap -->
+    <!-- Bootstrap JS -->
     <?php require 'includes/bootstrapjs.php'; ?>
 </body>
 </html>

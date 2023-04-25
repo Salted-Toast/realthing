@@ -1,26 +1,19 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Head -->
-   <?php require 'includes/head.php'; ?>
+    <?php require 'includes/head.php'; ?>
 </head>
 <body>
     <!-- Navbar -->
-    <?php require 'includes/nav.php'; ?>
-    <!-- Connection -->
-    <?php require 'scripts/connect.php'; ?>
-
+    <?php require 'includes/navbar.php'; ?>
+    
     <!-- Content -->
-    <div class="container-fluid">
-        <div class="container d-flex justify-content-center" style="margin-top:15%;">
-            <h1>You Do not have permission/Forbidden - 401/403 Error</h1>
-        </div>
-    </div>
+    <h1>401/403 Error - Forbiden / You do not have permission to view this</h1>
 
     <!-- Footer -->
     <?php require 'includes/footer.php'; ?>
 
-    <!-- JS Bootstrap -->
+    <!-- Bootstrap JS -->
     <?php require 'includes/bootstrapjs.php'; ?>
 </body>
 </html>
