@@ -46,9 +46,16 @@
                 </ul>
             </div>
             <div id="feature-explanation" class="tab-content">
-                <h3 class="mt-3">Personal Health Tracker</h3>
-                <p>Here's an explanation of our latest feature:</p>
-                <h3>Air Quality Dashboard</h3>
+                <div class="row">
+                    <h3 class="mt-3">Personal Health Tracker</h3>
+                    <p>The health tracker tool, acts as a diary for the users, it lets them log their feelings about their health with a user comment. In conjunction with the comments, it will take in an array of data for each comment submission and then analyse said data and output custom health advices based on overall temperature and Air Quality Index.</p>        
+                </div>    
+                <div class="row">
+                    <h3>Air Quality Dashboard</h3>
+                    <p>The Air Quality Dashboard will give you, the user an overall look at the quality of the air in their chosen location with factors sutch as max and min temperature, how the temperature accutally feels, the air quality index and more.</p>
+                </div>
+                
+
             </div>
         </div>
     </div>

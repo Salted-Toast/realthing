@@ -12,7 +12,7 @@
     <!-- Connection -->
     <?php require 'scripts/connect.php'; ?>
 
-    <!-- Content -->
+    <!-- Account -->
     <div class="container">
         <div class="card m-4 p-4">
             <div class="row mb-3 d-flex align-items-center">
