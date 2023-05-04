@@ -26,7 +26,7 @@ Made with:
 
 - [PHP](https://www.php.net)
 - [Bootstrap](https://getbootstrap.com)
-- [MySQL](https://www.mysql.com) ([PhpMyAdmin](https://www.phpmyadmin.net))
+- [MySQL](https://www.mysql.com) [(PhpMyAdmin)](https://www.phpmyadmin.net))
 - [Google Charts](https://developers.google.com/chart)
 - [Openweathermap APIs](https://openweathermap.org)
 - JavaScript
