@@ -12,6 +12,7 @@ Health Advice Group is a charitable organisation that provides health advice to 
 
 ## How to View
 
+- If you have no interest in being able to edit it yourself you can visit [where I have hosted it](https://feedback.remote.ac)
 - Download xampp by running `winget install ApacheFriends.Xampp.8.2`.
 - Remove content from htdocs folder with command `Remove-Item C:\xampp\htdocs\* -Recurse`. (assuming you installed it on the C drive)
 - Clone this repository into the same directory using this `git clone https://github.com/morrison-page/realthing.git C:\xampp\htdocs\`.
