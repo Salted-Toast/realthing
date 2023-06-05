@@ -8,7 +8,7 @@
 
 ## Scenario
 
-Health Advice Group is a charitable organisation that provides health advice to people in extreme weather and I have been tasked with develeoping a digital solution to assist them extending their reach and breaking into the digital sector.
+Health Advice Group is a charitable organisation that provides health advice to people living in extreme weather conditions and I have been tasked with develeoping a digital solution to assist them extending their reach and breaking into the digital sector.
 
 ## How to View
 
@@ -33,8 +33,5 @@ Made with:
 - JavaScript
 - HTML
 - CSS
-
-
-
 
 > .htaccess file is for appache web servers for nice address-bar links (wont work without)
