@@ -15,7 +15,7 @@ Health Advice Group is a charitable organisation that provides health advice to 
 - If you have no interest in being able to edit it yourself you can visit [where I have hosted it](https://feedback.remote.ac) otherwise follow the steps below.
 - Download xampp by running `winget install ApacheFriends.Xampp.8.2`.
 - Remove content from htdocs folder with command `Remove-Item C:\xampp\htdocs\* -Recurse`. (assuming you installed it on the C drive)
-- Clone this repository into the same directory using this `git clone https://github.com/morrison-page/realthing.git C:\xampp\htdocs\`.
+- Clone this repository into the same directory using this `git clone https://github.com/morrison-page/occupational-specialism.git C:\xampp\htdocs\`.
 - Launch xampps control panel and start the 'Apache' and 'MySQL' Modules.
 - Open PhpMyAdmin by clicking the 'Admin' button for MySQL.
 - Create a new database called 'occupational_specialism' and import the SQL file found in the database directory.
